@@ -29,10 +29,19 @@ export const getRecommended = async() => {
                             followedBy: {
                                 some: {
                                     followerId: userId
-                                }
-                            }
-                        }
-                    }
+                                },
+                            },
+                        },
+                    },
+                    {
+                        NOT: {
+                            blocking: {
+                                some: {
+                                    blockedId: userId,
+                                },
+                            },
+                        },
+                    },
                 ],
             },
             orderBy: {
