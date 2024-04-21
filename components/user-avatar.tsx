@@ -55,11 +55,9 @@ export const UserAvatar = ({username, imageUrl, isLive, showBadge, size}:UserAva
     )
 }
 
-interface userAvatarSkeletonProps extends VariantProps<typeof avatarSizes> {
+interface userAvatarSkeletonProps extends VariantProps<typeof avatarSizes> {};
 
-}
-
-export const userAvatarSkeleton = ({size}:userAvatarSkeletonProps) => {
+export const UserAvatarSkeleton = ({size}:userAvatarSkeletonProps) => {
     return (
         <Skeleton 
         className={cn(
@@ -67,5 +65,5 @@ export const userAvatarSkeleton = ({size}:userAvatarSkeletonProps) => {
             avatarSizes({size})
         )}
         />
-    )
-}
+    );
+};
